@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu - Mana Pickles</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+background-image:url("bg.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+background-attachment:fixed;
+}
+
+h1{
+color:#8B0000;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:95%;
+background:url("bg.jpg");
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+th,td{
+border:1px solid #ddd;
+padding:10px;
+}
+
+th{
+background:#8B0000;
+color:white;
+}
+
+button{
+background:linear-gradient(45deg,#ff0000,#8B0000);
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:25px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+background:linear-gradient(45deg,#8B0000,#ff0000);
+transform:scale(1.1);
+}
+
+tr:hover{
+background:#fff0f0;
+} 
+
+.section{
+margin-top:40px;
+}
+
+img{
+border-radius:10px;
+}
+
+@media(max-width:600px){
+
+h2{
+font-size:18px;
+}
+
+table{
+font-size:12px;
+}
+
+img{
+width:40px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <div style="background:#ffcc00;padding:10px;font-weight:bold;">
+🔥 Special Offer: Free delivery on orders above ₹999
+</div>
+
+<header style="background:#8B0000;color:white;padding:20px;font-size:28px;position:sticky;top:0;z-index:1000;">
+Mana Pickles Menu
+</header>
+
+<div class="section">
+
+<h2>🍗 Non-Veg Pickles</h2>
+
+<table>
+
+<tr>
+<th>Item </th>
+<th>1/2 Kg</th>
+<th>1 Kg</th>
+<th>Order</th>
+</tr>
+
+<tr>
+<td>
+<img src="chicken.jpg" width="60"><br>
+Chicken Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Spicy homemade Telangana style</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹350</td>
+<td>₹700</td>
+<td>
+
+<select id="chickenQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Chicken Pickle','chickenQty')">Order</button>
+
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="chickenboneless.jpg" width="60"><br>
+Boneless Chicken Pickle 🔥<br>
+<small>Soft boneless chicken with rich masala</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹400</td>
+<td>₹800</td>
+<td>
+<select id="chickenBonelessQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Chicken Boneless Pickle','chickenBonelessQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="gongurachicken.jpg" width="60"><br>
+Gongura Chicken Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Tangy gongura leaves with spicy chicken flavor</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹430</td>
+<td>₹860</td>
+<td>
+<select id="gonguraChickenQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Gongura Chicken Pickle','gonguraChickenQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="natukodi.jpg" width="60"><br>
+Natu Kodi Pickle 🔥<br>
+<small>Country chicken with authentic village taste</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹600</td>
+<td>₹1200</td>
+<td>
+<select id="natuKodiQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Natu Kodi Pickle','natuKodiQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="mutton.jpg" width="60"><br>
+Mutton Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Juicy mutton pieces in traditional spicy masala</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹750</td>
+<td>₹1500</td>
+<td>
+<select id="muttonQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Mutton Pickle','muttonQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="gonguramutton.jpg" width="60"><br>
+Gongura Mutton Pickle 🔥<br>
+<small>Perfect blend of gongura sourness & mutton spice</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹800</td>
+<td>₹1600</td>
+<td>
+<select id="gonguraMuttonQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Gongura Mutton Pickle','gonguraMuttonQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="regularfish.jpg" width="60"><br>
+Regular Fish (Rohu & Bocha) Pickle 🔥<br>
+<small>Fresh fish pickle with coastal style spices</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹450</td>
+<td>₹900</td>
+<td>
+<select id="fishQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Fish Pickle','fishQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="fish.jpg" width="60"><br>
+Korramenu Fish Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Premium fish with rich Andhra-style masala</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹600</td>
+<td>₹1200</td>
+<td>
+<select id="korramenuQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Korramenu Fish Pickle','korramenuQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="prawns.jpg" width="60"><br>
+Prawns Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Juicy prawns cooked in spicy homemade masala</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹450</td>
+<td>₹900</td>
+<td>
+<select id="prawnsQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Prawns Pickle','prawnsQty')">Order</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>🥭 Veg Pickles</h2>
+
+<table>
+
+<tr>
+<th>Item</th>
+<th>1/2 Kg</th>
+<th>1 Kg</th>
+<th>Order</th>
+</tr>
+
+<tr>
+<td>
+<img src="mango.jpg" width="60"><br>
+Mango Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Classic raw mango pickle with spicy flavor</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹300</td>
+<td>₹600</td>
+<td>
+<select id="mangoQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Mango Pickle','mangoQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="tomato.jpg" width="60"><br>
+Tomato Pickle 🔥<br>
+<small>Sweet & spicy tomato pickle</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹300</td>
+<td>₹600</td>
+<td>
+<select id="tomatoQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Tomato Pickle','tomatoQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="pandumirichi.jpg" width="60"><br>
+Pandu Mirichi Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Red chili pickle with strong spicy taste</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹300</td>
+<td>₹600</td>
+<td>
+<select id="panduMirchiQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Pandu Mirchi Pickle','panduMirchiQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="usirikaya.jpg" width="60"><br>
+Usirikaya Pickle 🔥<br>
+<small>Amla pickle rich in taste and health</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹300</td>
+<td>₹600</td>
+<td>
+<select id="usirikayaQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Usirikaya Pickle','usirikayaQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="lemon.jpg" width="60"><br>
+Lemon Pickle 🔥<br>
+<small>Tangy lemon pickle with traditional spices</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹300</td>
+<td>₹600</td>
+<td>
+<select id="lemonQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Lemon Pickle','lemonQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="chinthakaya.jpg" width="60"><br>
+Chinthakaya Pickle 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Tamarind pickle with sour & spicy flavor</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹350</td>
+<td>₹700</td>
+<td>
+<select id="chinthakayaQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Chinthakaya Pickle','chinthakayaQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="kakarakaya.jpg" width="60"><br>
+Kakarakaya Pickle 🔥<br>
+<small>Bitter gourd pickle with unique taste</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹300</td>
+<td>₹600</td>
+<td>
+<select id="kakarakayaQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Kakarakaya Pickle','kakarakayaQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="pulihorapulusu.jpg" width="60"><br>
+Pulihora Pulusu 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Ready mix for tasty tamarind rice</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹350</td>
+<td>₹700</td>
+<td>
+<select id="pulihoraQty">
+<option value="1/2 Kg">1/2 Kg</option>
+<option value="1 Kg">1 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Pulihora Pulusu','pulihoraQty')">Order</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>🌶️ Podulu</h2>
+
+<table>
+
+<tr>
+<th>Item</th>
+<th>250G</th>
+<th>1/2 Kg</th>
+<th>Order</th>
+</tr>
+
+<tr>
+<td>
+<img src="karivepaku.jpg" width="60"><br>
+Karivepaku Podi 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Curry leaves powder rich in aroma</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹160</td>
+<td>₹320</td>
+<td>
+<select id="karivepakuQty">
+<option value="250G">250G</option>
+<option value="1/2 Kg">1/2 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Karivepaku Karam Podi','karivepakuQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="vellulli.jpg" width="60"><br>
+Vellulli Karam Podi 🔥 <span style="color:red;font-weight:bold;">(Best Seller)</span><br>
+<small>Garlic powder with strong flavor</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹165</td>
+<td>₹330</td>
+<td>
+<select id="vellulliQty">
+<option value="250G">250G</option>
+<option value="1/2 Kg">1/2 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Vellulli Karam Podi','vellulliQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="munagaku.jpg" width="60"><br>
+Munagaku Karam Podi 🔥<br>
+<small>Drumstick leaves powder, healthy & tasty</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹175</td>
+<td>₹350</td>
+<td>
+<select id="munagakuQty">
+<option value="250G">250G</option>
+<option value="1/2 Kg">1/2 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Munagaku Karam Podi','munagakuQty')">Order</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<img src="pallikaram.jpg" width="60"><br>
+Palli Karam Podi 🔥<br>
+<small>Peanut powder perfect with rice</small><br>
+⭐⭐⭐⭐⭐
+</td>
+<td>₹160</td>
+<td>₹320</td>
+<td>
+<select id="palliQty">
+<option value="250G">250G</option>
+<option value="1/2 Kg">1/2 Kg</option>
+</select>
+
+<br><br>
+
+<button onclick="orderNow('Palli Karam Podi','palliQty')">Order</button>
+</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+<h2>Customer Reviews ❤️</h2>
+
+<p>⭐⭐⭐⭐⭐ "Amazing taste! Just like homemade" - Ramesh</p>
+
+<p>⭐⭐⭐⭐⭐ "Very fresh and spicy, loved it!" - Sita</p>
+
+<p>⭐⭐⭐⭐⭐ "Best pickles I ordered online!" - Kiran</p>
+
+</div>
+<div class="section">
+
+<h2>Why Choose Mana Pickles? 💯</h2>
+
+<p>✔ Homemade with love ❤️</p>
+<p>✔ No preservatives 🚫</p>
+<p>✔ Authentic Telangana taste 🌶️</p>
+<p>✔ Freshly prepared on order 🍲</p>
+<p>✔ High quality ingredients only 🥭</p>
+
+</div>
+
+<footer style="background:#8B0000;color:white;padding:20px;">
+
+<p>📞 Contact: +91 7674911204</p>
+
+<p>Follow Us:</p>
+
+<a href="https://wa.me/917674911204" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="35">
+</a>
+  
+<a href="https://www.facebook.com/share/1Bpv5CaTEo/?mibextid=wwXIfr" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="30">
+</a>
+
+<a href="https://instagram.com/mana_pickles__" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="30">
+</a>
+
+<a href="https://youtube.com/@mana_pickles?si=1FY25g-YSq0KYT91" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="30">
+</a>
+<p>❤️ Homemade with Love | Mana Pickles</p>
+
+</footer>
+
+<a href="https://wa.me/917674911204" 
+style="position:fixed;bottom:20px;right:20px;background:#25D366;
+color:white;padding:15px;border-radius:50%;font-size:22px;
+text-decoration:none;display:flex;align-items:center;justify-content:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="25">
+
+</a>
+
+<script>
+function orderNow(item, qtyId){
+var qty = document.getElementById(qtyId).value;
+
+var message = "Hello,\n\nI would like to place an order:\n" 
++ item + "\nQuantity: " + qty + 
+"\n\nKindly confirm availability.";
+
+var url = "https://wa.me/917674911204?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>

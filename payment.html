@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment & Delivery | Mana Pickles</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  h1, h2 {
+    margin: 20px 0;
+    font-weight: 700;
+  }
+
+  h1 {
+    color: #d84315;
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    color: #6d4c41;
+    font-size: 2rem;
+    margin-top: 50px;
+  }
+
+  /* ---------- Payment Section ---------- */
+  .payment-section {
+    margin-top: 30px;
+  }
+
+  .upi-card {
+    display: inline-block;
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    width: 260px;
+    cursor: pointer;
+  }
+
+  .upi-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  }
+
+  .upi-card img {
+    width: 150px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+  }
+
+  .upi-card:hover img {
+    transform: scale(1.1) rotate(2deg);
+  }
+
+  .upi-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+    text-align: left;
+    transition: color 0.4s ease;
+  }
+
+  .upi-card:hover p {
+    color: #d84315;
+  }
+
+  .copy-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d84315;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .copy-btn:hover {
+    background-color: #b2310f;
+  }
+
+  /* ---------- Delivery Section ---------- */
+  .delivery-info {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #4e342e;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+
+  .delivery-info p::before {
+    content: "📦 ";
+  }
+
+  .delivery-info p:nth-child(2)::before {
+    content: "⏰ ";
+  }
+
+  .delivery-info p:nth-child(3)::before {
+    content: "📍 ";
+  }
+
+  .delivery-info p:nth-child(4)::before {
+    content: "💌 ";
+  }
+
+  .delivery-info p:nth-child(5)::before {
+    content: "❌ ";
+  }
+
+  .delivery-info p:nth-child(6)::before {
+    content: "📞 ";
+  }
+
+  /* ---------- Mobile Responsiveness ---------- */
+  @media (max-width: 600px) {
+    .upi-card {
+      width: 90%;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .delivery-info {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Payment & Delivery</h1>
+
+<div class="payment-section">
+  <div class="upi-card">
+    <h2>Pay via UPI</h2>
+    <img src="qr.jpg" alt="UPI QR Code">
+    <p><strong>UPI ID:</strong> <span id="upi-id" style="color:#d84315;">manapickles@ybl</span></p>
+    <button class="copy-btn" onclick="copyUPI()">Copy UPI ID</button>
+    <p><strong>Steps to Pay:</strong></p>
+    <p>1. Open your UPI app (Google Pay, PhonePe, Paytm, etc.)</p>
+    <p>2. Scan the QR code above</p>
+    <p>3. Enter the amount for your order</p>
+    <p>4. Confirm payment and note the transaction ID</p>
+  </div>
+</div>
+
+<h2>Delivery Information</h2>
+<div class="delivery-info">
+  <p>Delivery Available Across India</p>
+  <p>Estimated Delivery Time: 4-5 Days after payment confirmation ⏰</p>
+  <p>We ensure safe and secure packaging so your pickles reach you fresh and intact 📦</p>
+  <p>Once dispatched, tracking details will be shared via WhatsApp or Email</p>
+  <p>Returns: Food items are non-returnable ❌</p>
+  <p>If you have any questions regarding your order or delivery, please contact us at <strong>+91-7674911204</strong> or email <strong>manapicklesno1@gmail.com</strong></p>
+</div>
+
+<footer style="background:#8B0000;color:white;padding:20px;">
+
+
+
+<p>Follow Us:</p>
+
+<a href="https://wa.me/917674911204" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="35">
+</a>
+  
+<a href="https://www.facebook.com/share/1Bpv5CaTEo/?mibextid=wwXIfr" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="30">
+</a>
+
+<a href="https://instagram.com/mana_pickles__" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="30">
+</a>
+
+<a href="https://youtube.com/@mana_pickles?si=1FY25g-YSq0KYT91" style="margin:10px;">
+<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="30">
+</a>
+<p>❤️ Homemade with Love | Mana Pickles</p>
+
+</footer>
+
+<script>
+function copyUPI() {
+  const upiID = document.getElementById("upi-id").innerText;
+  navigator.clipboard.writeText(upiID).then(() => {
+    alert("UPI ID copied to clipboard: " + upiID);
+  }).catch(() => {
+    alert("Failed to copy UPI ID. Please copy manually.");
+  });
+}
+</script>
+
+</body>
+</html>
